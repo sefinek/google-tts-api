@@ -31,7 +31,7 @@ Please see [CHANGELOG](https://github.com/sefinek24/google-tts-api/blob/master/C
 
 | Option       | Type      | Default                      | Description                                                                                                                 |
 |--------------|-----------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| `lang`       | `string`  | en                           | See all avaiable language code at https://cloud.google.com/speech/docs/languages                                            |
+| `lang`       | `string`  | en                           | See all available language code at https://cloud.google.com/speech/docs/languages                                           |
 | `slow`       | `boolean` | false                        | Use the slow audio speed if set `slow` to `true`                                                                            |
 | `host`       | `string`  | https://translate.google.com | You can change the `host` if the default host could not work in your region (e.g. https://translate.google.com.cn).         |
 | `timeout`    | `number`  | 10000 (ms)                   | (Only for `getAudioBase64` and `getAllAudioBase64`) Set timeout for the HTTP request.                                       |
