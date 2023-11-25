@@ -42,12 +42,12 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 // 1. all audio URLs
 const results = googleTTS.getAllAudioUrls(article);
 results.forEach((item, i) => {
-  console.log(`${i + 1}. ${item.shortText.length} characters`, item, '\n');
+	console.log(`${i + 1}. ${item.shortText.length} characters`, item, '\n');
 });
 
 // 2. all audio base64 texts
 googleTTS.getAllAudioBase64(article).then((results) => {
-  results.forEach((item, i) => {
-    console.log(`${i + 1}. ${item.shortText.length} characters`, item, '\n');
-  });
+	results.forEach((item, i) => {
+		console.log(`${i + 1}. ${item.shortText.length} characters`, item, '\n');
+	});
 });

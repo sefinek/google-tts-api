@@ -21,8 +21,8 @@ interface Option {
  * @returns {Promise<string>} url
  */
 export const getAudioBase64 = async (
-  text: string,
-  { lang = 'en', slow = false, host = 'https://translate.google.com', timeout = 10000 }: Option = {}
+    text: string,
+    { lang = 'en', slow = false, host = 'https://translate.google.com', timeout = 10000 }: Option = {}
 ): Promise<string> => {
   assertInputTypes(text, lang, slow, host);
 
@@ -32,7 +32,7 @@ export const getAudioBase64 = async (
 
   if (text.length > 200) {
     throw new RangeError(
-      `text length (${text.length}) should be less than 200 characters. Try "getAllAudioBase64(text, [option])" for long text.`
+        `text length (${text.length}) should be less than 200 characters. Try "getAllAudioBase64(text, [option])" for long text.`
     );
   }
 
@@ -42,12 +42,12 @@ export const getAudioBase64 = async (
     url: '/_/TranslateWebserverUi/data/batchexecute',
     timeout,
     data:
-      'f.req=' +
-      encodeURIComponent(
-        JSON.stringify([
-          [['jQ1olc', JSON.stringify([text, lang, slow ? true : null, 'null']), null, 'generic']],
-        ])
-      ),
+        'f.req=' +
+        encodeURIComponent(
+            JSON.stringify([
+              [['jQ1olc', JSON.stringify([text, lang, slow ? true : null, 'null']), null, 'generic']],
+            ])
+        ),
   });
 
   // 1. parse audio base64 string
@@ -96,14 +96,14 @@ interface LongTextOption extends Option {
  * @return {Result[]} the list with short text and audio base64
  */
 export const getAllAudioBase64 = async (
-  text: string,
-  {
-    lang = 'en',
-    slow = false,
-    host = 'https://translate.google.com',
-    splitPunct = '',
-    timeout = 10000,
-  }: LongTextOption = {}
+    text: string,
+    {
+      lang = 'en',
+      slow = false,
+      host = 'https://translate.google.com',
+      splitPunct = '',
+      timeout = 10000,
+    }: LongTextOption = {}
 ): Promise<{ shortText: string; base64: string }[]> => {
   assertInputTypes(text, lang, slow, host);
 
@@ -117,7 +117,7 @@ export const getAllAudioBase64 = async (
 
   const shortTextList = splitLongText(text, { splitPunct });
   const base64List = await Promise.all(
-    shortTextList.map((shortText) => getAudioBase64(shortText, { lang, slow, host, timeout }))
+      shortTextList.map((shortText) => getAudioBase64(shortText, { lang, slow, host, timeout }))
   );
 
   // put short text and base64 text in a list

@@ -20,8 +20,8 @@ interface Option {
  * @returns {string[]} short text list
  */
 const splitLongText = (
-  text: string,
-  { maxLength = 200, splitPunct = '' }: Option = {}
+    text: string,
+    { maxLength = 200, splitPunct = '' }: Option = {}
 ): string[] => {
   const isSpaceOrPunct = (s: string, i: number) => {
     const regex = new RegExp('[' + SPACE_REGEX + DEFAULT_PUNCTUATION_REGEX + splitPunct + ']');
@@ -61,7 +61,7 @@ const splitLongText = (
     if (end === -1) {
       const str = text.slice(start, start + maxLength);
       throw new Error(
-        'The word is too long to split into a short text:' +
+          'The word is too long to split into a short text:' +
           `\n${str} ...` +
           '\n\nTry the option "splitPunct" to split the text by punctuation.'
       );

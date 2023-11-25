@@ -7,12 +7,12 @@ console.log({ url }); // https://translate.google.com/translate_tts?...
 
 // 2. get base64 text
 googleTTS
-  .getAudioBase64('Hello World', { lang: 'en-GB' })
-  .then((base64) => {
-    console.log({ base64 });
+	.getAudioBase64('Hello World', { lang: 'en-GB' })
+	.then((base64) => {
+		console.log({ base64 });
 
-    // save the audio file
-    const buffer = Buffer.from(base64, 'base64');
-    fs.writeFileSync('hello-world-british.mp3', buffer, { encoding: 'base64' });
-  })
-  .catch(console.error);
+		// save the audio file
+		const buffer = Buffer.from(base64, 'base64');
+		fs.writeFileSync('hello-world-british.mp3', buffer, { encoding: 'base64' });
+	})
+	.catch(console.error);
