@@ -8,9 +8,6 @@ Google TTS (Text-To-Speech) for node.js
 [![][dependency-dev-img]][dependency-dev-url]
 [![][install-size-img]][install-size-result]
 
-[![][gh-action-img]][gh-action-url]
-[![][coverage-img]][coverage-url]
-
 ## Installation
 
 ```bash
