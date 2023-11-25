@@ -8,18 +8,15 @@ Google TTS (Text-To-Speech) for Node.js without any vulnerabilities.
 [![][install-size-img]][install-size-result]
 
 ## Installation
-
 ```bash
 $ npm install --save google-tts-api
 $ npm install -D typescript @types/node # Only for TypeScript
 ```
 
 ## Change Log
-
-Please see [CHANGELOG](https://github.com/sefinek24/google-tts-api/blob/master/CHANGELOG.md).
+[CHANGELOG.md](https://github.com/sefinek24/google-tts-api/blob/master/CHANGELOG.md)
 
 ## Usage
-
 | Method              | Options (all optional)                          | Return Type                                         | Handle Long Text |
 |---------------------|-------------------------------------------------|-----------------------------------------------------|:----------------:|
 | `getAudioUrl`       | `lang`, `slow`, `host`                          | `string`                                            |                  |
@@ -28,7 +25,6 @@ Please see [CHANGELOG](https://github.com/sefinek24/google-tts-api/blob/master/C
 | `getAllAudioBase64` | `lang`, `slow`, `host`, `timeout`, `splitPunct` | `Promise<{ shortText: string; base64: string; }[]>` |        ✅         |
 
 ### Options (all optional)
-
 | Option       | Type      | Default                      | Description                                                                                                                 |
 |--------------|-----------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | `lang`       | `string`  | en                           | See all available language code at https://cloud.google.com/speech/docs/languages                                           |
@@ -38,9 +34,7 @@ Please see [CHANGELOG](https://github.com/sefinek24/google-tts-api/blob/master/C
 | `splitPunct` | `string`  |                              | (Only for `getAllAudioUrls` and `getAllAudioBase64`) Set the punctuation to split the long text to short text. (e.g. "，、。") |
 
 ## Examples
-
 ### 1. `getAudioUrl(text, [option])`
-
 ```js
 import * as googleTTS from 'google-tts-api'; // ES6 or TypeScript
 const googleTTS = require('google-tts-api'); // CommonJS
@@ -55,7 +49,6 @@ console.log(url); // https://translate.google.com/translate_tts?...
 ```
 
 ### 2. `getAudioBase64(text, [option])`
-
 ```js
 import * as googleTTS from 'google-tts-api'; // ES6 or TypeScript
 const googleTTS = require('google-tts-api'); // CommonJS
@@ -73,7 +66,6 @@ googleTTS
 ```
 
 ### 3. `getAllAudioUrls(text, [option])` (For text longer than 200 characters)
-
 ```js
 import * as googleTTS from 'google-tts-api'; // ES6 or TypeScript
 const googleTTS = require('google-tts-api'); // CommonJS
@@ -93,7 +85,6 @@ console.log(results);
 ```
 
 ### 4. `getAllAudioBase64(text, [option])` (For text longer than 200 characters)
-
 ```js
 import * as googleTTS from 'google-tts-api'; // ES6 or TypeScript
 const googleTTS = require('google-tts-api'); // CommonJS
@@ -118,7 +109,6 @@ googleTTS
 [More Examples](https://github.com/sefinek24/google-tts-api/tree/master/example)
 
 ## License
-
 MIT
 
 [npm-url]: https://nodei.co/npm/google-tts-api
