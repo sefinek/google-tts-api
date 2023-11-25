@@ -1,5 +1,5 @@
 {
-  "name": "google-tts-api",
+  "name": "@sefinek/google-tts-api",
   "version": "2.1.0",
   "description": "Google TTS (Text-To-Speech) for node.js",
   "main": "dist/index.js",
@@ -14,9 +14,11 @@
     "url": "git+https://github.com/sefinek24/google-tts-api.git"
   },
   "keywords": [
+    "tts",
     "google",
     "google-tts",
-    "text-to-speech"
+    "text-to-speech",
+    "google-text-to-speech"
   ],
   "author": "zlargon",
   "license": "MIT",
