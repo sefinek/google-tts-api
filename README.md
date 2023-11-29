@@ -111,12 +111,12 @@ googleTTS
 ## License
 MIT
 
-[npm-url]: https://nodei.co/npm/google-tts-api
-[npm-img]: https://nodei.co/npm/google-tts-api.png
-[install-size-img]: https://packagephobia.com/badge?p=google-tts-api
-[install-size-result]: https://packagephobia.com/result?p=google-tts-api
-[dependency-url]: https://david-dm.org/sefinek24/google-tts-api
-[dependency-img]: https://img.shields.io/david/sefinek24/google-tts-api.svg
+[npm-url]: https://nodei.co/npm/@sefinek/google-tts-api
+[npm-img]: https://nodei.co/npm/@sefinek/google-tts-api.png
+[install-size-img]: https://packagephobia.com/badge?p=@sefinek/google-tts-api
+[install-size-result]: https://packagephobia.com/result?p=@sefinek/google-tts-api
+[dependency-url]: https://david-dm.org/sefinek24/@sefinek/google-tts-api
+[dependency-img]: https://img.shields.io/david/sefinek24/@sefinek/google-tts-api.svg
 [dependency-dev-url]: https://david-dm.org/sefinek24/google-tts-api#info=devDependencies
 [dependency-dev-img]: https://img.shields.io/david/dev/sefinek24/google-tts-api.svg
 [gh-action-url]: https://github.com/sefinek24/google-tts-api/actions
