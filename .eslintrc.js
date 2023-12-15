@@ -9,7 +9,6 @@ module.exports = {
 	'parserOptions': {
 		'ecmaVersion': 2023,
 	},
-	'ignorePatterns': ['public/js/stella/slider.js', 'public/js/lazyload.js', 'public/js/bootstrap.bundle.min.js', 'public/js/jquery-3.7.0.min.js'],
 	'rules': {
 		'arrow-spacing': ['warn', { before: true, after: true }],
 		// 'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
