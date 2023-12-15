@@ -32,7 +32,7 @@
   "devDependencies": {
     "is-base64": "^1.1.0",
     "jest": "^29.7.0",
-    "typescript": "^5.3.2"
+    "typescript": "^5.3.3"
   },
   "jest": {
     "testEnvironment": "node",
