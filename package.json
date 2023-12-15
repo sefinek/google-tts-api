@@ -1,7 +1,7 @@
 {
   "name": "@sefinek/google-tts-api",
   "version": "2.1.1",
-  "description": "Google TTS (Text-To-Speech) for node.js",
+  "description": "Google TTS (Text-To-Speech) for Node.js.",
   "keywords": [
     "tts",
     "google",
