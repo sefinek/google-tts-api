@@ -3,9 +3,9 @@ import splitLongText from './splitLongText';
 import url from 'url';
 
 interface Option {
-  lang?: string;
-  slow?: boolean;
-  host?: string;
+    lang?: string;
+    slow?: boolean;
+    host?: string;
 }
 
 /**
@@ -22,35 +22,35 @@ export const getAudioUrl = (
     text: string,
     { lang = 'en', slow = false, host = 'https://translate.google.com' }: Option = {}
 ): string => {
-  assertInputTypes(text, lang, slow, host);
+    assertInputTypes(text, lang, slow, host);
 
-  if (text.length > 200) {
-    throw new RangeError(
-        `text length (${text.length}) should be less than 200 characters. Try "getAllAudioUrls(text, [option])" for long text.`
+    if (text.length > 200) {
+        throw new RangeError(
+            `text length (${text.length}) should be less than 200 characters. Try "getAllAudioUrls(text, [option])" for long text.`
+        );
+    }
+
+    return (
+        host +
+        '/translate_tts' +
+        url.format({
+            query: {
+                ie: 'UTF-8',
+                q: text,
+                tl: lang,
+                total: 1,
+                idx: 0,
+                textlen: text.length,
+                client: 'tw-ob',
+                prev: 'input',
+                ttsspeed: slow ? 0.24 : 1,
+            },
+        })
     );
-  }
-
-  return (
-      host +
-      '/translate_tts' +
-      url.format({
-        query: {
-          ie: 'UTF-8',
-          q: text,
-          tl: lang,
-          total: 1,
-          idx: 0,
-          textlen: text.length,
-          client: 'tw-ob',
-          prev: 'input',
-          ttsspeed: slow ? 0.24 : 1,
-        },
-      })
-  );
 };
 
 interface LongTextOption extends Option {
-  splitPunct?: string;
+    splitPunct?: string;
 }
 
 /**
@@ -73,20 +73,20 @@ interface LongTextOption extends Option {
 export const getAllAudioUrls = (
     text: string,
     {
-      lang = 'en',
-      slow = false,
-      host = 'https://translate.google.com',
-      splitPunct = '',
+        lang = 'en',
+        slow = false,
+        host = 'https://translate.google.com',
+        splitPunct = '',
     }: LongTextOption = {}
 ): { shortText: string; url: string }[] => {
-  assertInputTypes(text, lang, slow, host);
+    assertInputTypes(text, lang, slow, host);
 
-  if (typeof splitPunct !== 'string') {
-    throw new TypeError('splitPunct should be a string');
-  }
+    if (typeof splitPunct !== 'string') {
+        throw new TypeError('splitPunct should be a string');
+    }
 
-  return splitLongText(text, { splitPunct }).map((shortText) => ({
-    shortText,
-    url: getAudioUrl(shortText, { lang, slow, host }),
-  }));
+    return splitLongText(text, { splitPunct }).map((shortText) => ({
+        shortText,
+        url: getAudioUrl(shortText, { lang, slow, host }),
+    }));
 };
