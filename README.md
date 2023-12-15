@@ -36,8 +36,8 @@ $ npm install -D typescript @types/node # Only for TypeScript
 ## Examples
 ### 1. `getAudioUrl(text, [option])`
 ```js
-import * as googleTTS from 'google-tts-api'; // ES6 or TypeScript
-const googleTTS = require('google-tts-api'); // CommonJS
+import * as googleTTS from '@sefinek/google-tts-api'; // ES6 or TypeScript
+const googleTTS = require('@sefinek/google-tts-api'); // CommonJS
 
 // get audio URL
 const url = googleTTS.getAudioUrl('Hello World', {
@@ -50,8 +50,8 @@ console.log(url); // https://translate.google.com/translate_tts?...
 
 ### 2. `getAudioBase64(text, [option])`
 ```js
-import * as googleTTS from 'google-tts-api'; // ES6 or TypeScript
-const googleTTS = require('google-tts-api'); // CommonJS
+import * as googleTTS from '@sefinek/google-tts-api'; // ES6 or TypeScript
+const googleTTS = require('@sefinek/google-tts-api'); // CommonJS
 
 // get base64 text
 googleTTS
@@ -67,8 +67,8 @@ googleTTS
 
 ### 3. `getAllAudioUrls(text, [option])` (For text longer than 200 characters)
 ```js
-import * as googleTTS from 'google-tts-api'; // ES6 or TypeScript
-const googleTTS = require('google-tts-api'); // CommonJS
+import * as googleTTS from '@sefinek/google-tts-api'; // ES6 or TypeScript
+const googleTTS = require('@sefinek/google-tts-api'); // CommonJS
 
 const results = googleTTS.getAllAudioUrls('LONG_TEXT_...', {
   lang: 'en',
@@ -86,8 +86,8 @@ console.log(results);
 
 ### 4. `getAllAudioBase64(text, [option])` (For text longer than 200 characters)
 ```js
-import * as googleTTS from 'google-tts-api'; // ES6 or TypeScript
-const googleTTS = require('google-tts-api'); // CommonJS
+import * as googleTTS from '@sefinek/google-tts-api'; // ES6 or TypeScript
+const googleTTS = require('@sefinek/google-tts-api'); // CommonJS
 
 googleTTS
   .getAllAudioBase64('LONG_TEXT_...', {

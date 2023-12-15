@@ -29,7 +29,7 @@
 `googleTTS()` is changed to `googleTTS.getAudioUrl()`.
 
 ```js
-const googleTTS = require('google-tts-api');
+const googleTTS = require('@sefinek/google-tts-api');
 
 // Before version 0.0.6
 // Original googleTTS is a promise function
