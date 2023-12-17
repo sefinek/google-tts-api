@@ -1,11 +1,11 @@
 # @sefinek/google-tts-api
 Google TTS (Text-To-Speech) for [Node.js](https://nodejs.org) without any vulnerabilities.
 
-[![][npm-img]][npm-url]
+![@sefinek/google-tts-api.png](https://nodei.co/npm/@sefinek/google-tts-api.png)
 
-[![][dependency-img]][dependency-url]
-[![][dependency-dev-img]][dependency-dev-url]
-[![][install-size-img]][install-size-result]
+![@sefinek/google-tts-api.png](https://img.shields.io/npm/dt/@sefinek/google-tts-api?maxAge=3600)
+![@sefinek/google-tts-api.png](https://img.shields.io/github/last-commit/sefinek24/google-tts-api)
+![@sefinek/google-tts-api.png](https://img.shields.io/github/languages/code-size/sefinek24/google-tts-api)
 
 
 ## Installation
@@ -111,17 +111,3 @@ googleTTS
 
 ## License
 MIT
-
-
-[npm-url]: https://nodei.co/npm/@sefinek/google-tts-api
-[npm-img]: https://nodei.co/npm/@sefinek/google-tts-api.png
-[install-size-img]: https://packagephobia.com/badge?p=@sefinek/google-tts-api
-[install-size-result]: https://packagephobia.com/result?p=@sefinek/google-tts-api
-[dependency-url]: https://david-dm.org/sefinek24/@sefinek/google-tts-api
-[dependency-img]: https://img.shields.io/david/sefinek24/@sefinek/google-tts-api.svg
-[dependency-dev-url]: https://david-dm.org/sefinek24/google-tts-api#info=devDependencies
-[dependency-dev-img]: https://img.shields.io/david/dev/sefinek24/google-tts-api.svg
-[gh-action-url]: https://github.com/sefinek24/google-tts-api/actions
-[gh-action-img]: https://github.com/sefinek24/google-tts-api/actions/workflows/build.yml/badge.svg
-[coverage-url]: https://coveralls.io/github/sefinek24/google-tts-api
-[coverage-img]: https://img.shields.io/coveralls/github/sefinek24/google-tts-api
