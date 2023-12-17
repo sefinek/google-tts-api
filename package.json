@@ -20,6 +20,15 @@
   "license": "MIT",
   "author": "zlargon",
   "main": "dist/index.js",
+  "directories": {
+    "example": "example",
+    "dist": "dist"
+  },
+  "files": [
+    "dist/",
+    "example/",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc -p .",
     "cover": "npm run build && jest --coverage",

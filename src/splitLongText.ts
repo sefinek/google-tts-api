@@ -1,7 +1,7 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 const SPACE_REGEX = '\\s\\uFEFF\\xA0';
 
-// https://remarkablemark.org/blog/2019/09/28/javascript-remove-punctuation/
+// https://remarkablemark.org/blog/2019/09/28/javascript-remove-punctuation
 const DEFAULT_PUNCTUATION_REGEX = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
 
 interface Option {
