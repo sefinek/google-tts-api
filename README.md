@@ -106,7 +106,7 @@ googleTTS
   .catch(console.error);
 ```
 
-[More examples](https://github.com/sefinek24/google-tts-api/tree/master/example)
+#### [More examples](https://github.com/sefinek24/google-tts-api/tree/master/example)
 
 
 ## 📑 License
