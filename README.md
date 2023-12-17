@@ -7,14 +7,13 @@ Google TTS (Text-To-Speech) for Node.js without any vulnerabilities.
 [![][dependency-dev-img]][dependency-dev-url]
 [![][install-size-img]][install-size-result]
 
+
 ## Installation
 ```bash
 $ npm install --save google-tts-api
 $ npm install -D typescript @types/node # Only for TypeScript
 ```
 
-## Change Log
-[CHANGELOG.md](https://github.com/sefinek24/google-tts-api/blob/master/CHANGELOG.md)
 
 ## Usage
 | Method              | Options (all optional)                          | Return Type                                         | Handle Long Text |
@@ -32,6 +31,7 @@ $ npm install -D typescript @types/node # Only for TypeScript
 | `host`       | `string`  | https://translate.google.com | You can change the `host` if the default host could not work in your region (e.g. https://translate.google.com.cn).         |
 | `timeout`    | `number`  | 10000 (ms)                   | (Only for `getAudioBase64` and `getAllAudioBase64`) Set timeout for the HTTP request.                                       |
 | `splitPunct` | `string`  |                              | (Only for `getAllAudioUrls` and `getAllAudioBase64`) Set the punctuation to split the long text to short text. (e.g. "，、。") |
+
 
 ## Examples
 ### 1. `getAudioUrl(text, [option])`
@@ -108,8 +108,10 @@ googleTTS
 
 [More Examples](https://github.com/sefinek24/google-tts-api/tree/master/example)
 
+
 ## License
 MIT
+
 
 [npm-url]: https://nodei.co/npm/@sefinek/google-tts-api
 [npm-img]: https://nodei.co/npm/@sefinek/google-tts-api.png

@@ -27,7 +27,8 @@
   "files": [
     "dist/",
     "example/",
-    "LICENSE"
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
     "build": "tsc -p .",
