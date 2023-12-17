@@ -1,4 +1,4 @@
-# @sefinek/google-tts-api
+# 📢 @sefinek/google-tts-api
 Google TTS (Text-To-Speech) for [Node.js](https://nodejs.org) without any vulnerabilities.
 
 ![@sefinek/google-tts-api.png](https://nodei.co/npm/@sefinek/google-tts-api.png)
@@ -8,14 +8,14 @@ Google TTS (Text-To-Speech) for [Node.js](https://nodejs.org) without any vulner
 ![@sefinek/google-tts-api.png](https://img.shields.io/github/languages/code-size/sefinek24/google-tts-api)
 
 
-## Installation
+## 📥 Installation
 ```bash
 $ npm install --save google-tts-api
 $ npm install -D typescript @types/node # Only for TypeScript
 ```
 
 
-## Usage
+## 🤔 Usage
 | Method              | Options (all optional)                          | Return Type                                         | Handle Long Text |
 |---------------------|-------------------------------------------------|-----------------------------------------------------|:----------------:|
 | `getAudioUrl`       | `lang`, `slow`, `host`                          | `string`                                            |                  |
@@ -33,7 +33,7 @@ $ npm install -D typescript @types/node # Only for TypeScript
 | `splitPunct` | `string`  |                              | (Only for `getAllAudioUrls` and `getAllAudioBase64`) Set the punctuation to split the long text to short text. (e.g. "，、。") |
 
 
-## Examples
+## 💻 Examples
 ### 1. `getAudioUrl(text, [option])`
 ```js
 import * as googleTTS from '@sefinek/google-tts-api'; // ES6 or TypeScript
@@ -106,8 +106,8 @@ googleTTS
   .catch(console.error);
 ```
 
-[More Examples](https://github.com/sefinek24/google-tts-api/tree/master/example)
+[More examples](https://github.com/sefinek24/google-tts-api/tree/master/example)
 
 
-## License
+## 📑 License
 MIT
