@@ -1,5 +1,5 @@
 # @sefinek/google-tts-api
-Google TTS (Text-To-Speech) for Node.js without any vulnerabilities.
+Google TTS (Text-To-Speech) for [Node.js](https://nodejs.org) without any vulnerabilities.
 
 [![][npm-img]][npm-url]
 
