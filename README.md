@@ -39,7 +39,7 @@ $ npm install -D typescript @types/node # Only for TypeScript
 import * as googleTTS from '@sefinek/google-tts-api'; // ES6 or TypeScript
 const googleTTS = require('@sefinek/google-tts-api'); // CommonJS
 
-// get audio URL
+// Get audio URL
 const url = googleTTS.getAudioUrl('Hello World', {
   lang: 'en',
   slow: false,
@@ -53,7 +53,7 @@ console.log(url); // https://translate.google.com/translate_tts?...
 import * as googleTTS from '@sefinek/google-tts-api'; // ES6 or TypeScript
 const googleTTS = require('@sefinek/google-tts-api'); // CommonJS
 
-// get base64 text
+// Get base64 text
 googleTTS
   .getAudioBase64('Hello World', {
     lang: 'en',
