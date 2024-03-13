@@ -1,8 +1,6 @@
 # 📢 @sefinek/google-tts-api
 Google TTS (Text-To-Speech) for [Node.js](https://nodejs.org) without any vulnerabilities.
 
-![@sefinek/google-tts-api.png](https://nodei.co/npm/@sefinek/google-tts-api.png)
-
 ![@sefinek/google-tts-api.png](https://img.shields.io/npm/dt/@sefinek/google-tts-api?maxAge=3600)
 ![@sefinek/google-tts-api.png](https://img.shields.io/github/last-commit/sefinek24/google-tts-api)
 ![@sefinek/google-tts-api.png](https://img.shields.io/github/languages/code-size/sefinek24/google-tts-api)
