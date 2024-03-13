@@ -3,3 +3,4 @@
 .eslintrc.js
 coverage
 src
+tsconfig.json
