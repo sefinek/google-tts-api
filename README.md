@@ -38,7 +38,7 @@ import * as googleTTS from '@sefinek/google-tts-api'; // ES6 or TypeScript
 const googleTTS = require('@sefinek/google-tts-api'); // CommonJS
 
 // Get audio URL
-const url = googleTTS.getAudioUrl('Hello World', {
+const url = googleTTS.getAudioUrl('Hello world!', {
   lang: 'en',
   slow: false,
   host: 'https://translate.google.com',
@@ -53,7 +53,7 @@ const googleTTS = require('@sefinek/google-tts-api'); // CommonJS
 
 // Get base64 text
 googleTTS
-  .getAudioBase64('Hello World', {
+  .getAudioBase64('Hello world!', {
     lang: 'en',
     slow: false,
     host: 'https://translate.google.com',
