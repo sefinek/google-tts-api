@@ -1,4 +1,3 @@
-const fs = require('fs');
 const googleTTS = require('../dist/index');
 
 const article =
@@ -30,15 +29,15 @@ const article =
 
 const option = { lang: 'zh', splitPunct: '，、。' };
 
-// 1. all audio URLs
+// 1. All audio URLs
 const results = googleTTS.getAllAudioUrls(article, option);
 results.forEach((item, i) => {
 	console.log(`${i + 1}. ${item.shortText.length} characters`, item, '\n');
 });
 
-// 2. all audio base64 texts
-googleTTS.getAllAudioBase64(article, option).then((results) => {
-	results.forEach((item, i) => {
+// 2. All audio base64 texts
+googleTTS.getAllAudioBase64(article, option).then(data => {
+	data.forEach((item, i) => {
 		console.log(`${i + 1}. ${item.shortText.length} characters`, item, '\n');
 	});
 });

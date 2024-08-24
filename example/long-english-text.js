@@ -39,15 +39,15 @@ It was such people who began to flock to the cities seeking employment and who f
 
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`;
 
-// 1. all audio URLs
+// 1. All audio URLs
 const results = googleTTS.getAllAudioUrls(article);
 results.forEach((item, i) => {
 	console.log(`${i + 1}. ${item.shortText.length} characters`, item, '\n');
 });
 
-// 2. all audio base64 texts
-googleTTS.getAllAudioBase64(article).then((results) => {
-	results.forEach((item, i) => {
+// 2. All audio base64 texts
+googleTTS.getAllAudioBase64(article).then(data => {
+	data.forEach((item, i) => {
 		console.log(`${i + 1}. ${item.shortText.length} characters`, item, '\n');
 	});
 });

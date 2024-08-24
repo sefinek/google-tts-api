@@ -19,7 +19,7 @@ function downloadFile(url, dest) {
 
 		httpClient
 			.get(options, (res) => {
-				// check status code
+				// Check status code
 				if (res.statusCode !== 200) {
 					const msg = `request to ${url} failed, status code = ${res.statusCode} (${res.statusMessage})`;
 					reject(new Error(msg));
@@ -48,7 +48,7 @@ function downloadFile(url, dest) {
 const url = googleTTS.getAudioUrl('hello');
 console.log(url); // https://translate.google.com/translate_tts?...
 
-const dest = path.resolve(__dirname, 'hello.mp3'); // file destination
+const dest = path.resolve(__dirname, 'hello.mp3'); // File destination
 console.log('Download to ' + dest + ' ...');
 downloadFile(url, dest);
 console.log('Download success');
