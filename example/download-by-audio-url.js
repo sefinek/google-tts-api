@@ -13,8 +13,8 @@ function downloadFile(url, dest) {
 			host: info.host,
 			path: info.path,
 			headers: {
-				'user-agent': 'WHAT_EVER',
-			},
+				'user-agent': 'WHAT_EVER'
+			}
 		};
 
 		httpClient

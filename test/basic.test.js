@@ -11,7 +11,7 @@ const TestCases = [
 	['你好', { lang: 'zh' }],
 	['你好世界', { lang: 'zh' }],
 	['123', { lang: 'en', slow: true }],
-	['123', { lang: 'zh', slow: true }],
+	['123', { lang: 'zh', slow: true }]
 ];
 
 test('get TTS URL', async () => {

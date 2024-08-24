@@ -59,7 +59,7 @@ describe('Split long text', () => {
 
 	it('the single word is too long to split into short text', () => {
 		expect(() => splitLongText(text200, { maxLength: 100 })).toThrow(
-			'The word is too long to split into a short text:',
+			'The word is too long to split into a short text:'
 		);
 	});
 
@@ -73,7 +73,7 @@ describe('Split long text', () => {
 
 		// no additional split punctuation
 		expect(() => splitLongText(longChineseText)).toThrow(
-			'The word is too long to split into a short text:',
+			'The word is too long to split into a short text:'
 		);
 
 		// add additional split punctuation
