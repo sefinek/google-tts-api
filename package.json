@@ -3,11 +3,12 @@
   "version": "2.1.6",
   "description": "Google TTS (Text-To-Speech) for Node.js without any vulnerabilities. For free without any API keys!",
   "keywords": [
-    "tts",
     "google",
+    "google-text-to-speech",
     "google-tts",
     "text-to-speech",
-    "google-text-to-speech"
+    "tts",
+    "tts-api"
   ],
   "homepage": "https://github.com/sefinek24/google-tts-api#readme",
   "bugs": {
