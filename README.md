@@ -1,4 +1,4 @@
-# 📢 @sefinek/google-tts-api
+# 📢 Google TTS API
 Google TTS (Text-To-Speech) for [Node.js](https://nodejs.org) without any vulnerabilities. For free without any API keys!
 
 ![@sefinek/google-tts-api.png](https://img.shields.io/npm/dt/@sefinek/google-tts-api?maxAge=3600)
