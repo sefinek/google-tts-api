@@ -3,12 +3,18 @@
   "version": "2.1.7",
   "description": "Google TTS (Text-To-Speech) for Node.js without any vulnerabilities. For free without any API keys!",
   "keywords": [
+    "cloud",
+    "google api client",
+    "google api",
+    "google apis client",
+    "google apis",
+    "google cloud platform",
+    "google cloud",
+    "google texttospeech",
     "google",
-    "google-text-to-speech",
-    "google-tts",
-    "text-to-speech",
-    "tts",
-    "tts-api"
+    "google-api",
+    "text-to-speech api",
+    "texttospeech"
   ],
   "homepage": "https://github.com/sefinek24/google-tts-api#readme",
   "bugs": {
