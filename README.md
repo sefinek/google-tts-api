@@ -1,5 +1,7 @@
 # 📢 Google TTS API
-Google TTS (Text-To-Speech) for [Node.js](https://nodejs.org) without any vulnerabilities. For free without any API keys!
+Google TTS (Text-To-Speech) for [Node.js](https://nodejs.org). For free without any API keys!
+
+This is a fork of [zlargon/google-tts](https://github.com/zlargon/google-tts) with updated dependencies (the old versions had [vulnerabilities](http://github.com/zlargon/google-tts/blob/master/package.json#L27)).
 
 ![@sefinek/google-tts-api.png](https://img.shields.io/npm/dt/@sefinek/google-tts-api?maxAge=3600)
 ![@sefinek/google-tts-api.png](https://img.shields.io/github/last-commit/sefinek/google-tts-api)
