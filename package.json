@@ -1,6 +1,6 @@
 {
   "name": "@sefinek/google-tts-api",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "description": "Google TTS (Text-To-Speech) for Node.js without any vulnerabilities. For free without any API keys!",
   "keywords": [
     "cloud",
@@ -26,7 +26,13 @@
   },
   "license": "MIT",
   "author": "zlargon",
+  "type": "commonjs",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
   "scripts": {
     "build": "tsc -p .",
     "cover": "npm run build && jest --coverage",
