@@ -16,13 +16,13 @@
     "text-to-speech api",
     "texttospeech"
   ],
-  "homepage": "https://github.com/sefinek24/google-tts-api#readme",
+  "homepage": "https://github.com/sefinek/google-tts-api#readme",
   "bugs": {
-    "url": "https://github.com/sefinek24/google-tts-api/issues"
+    "url": "https://github.com/sefinek/google-tts-api/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sefinek24/google-tts-api.git"
+    "url": "git+https://github.com/sefinek/google-tts-api.git"
   },
   "license": "MIT",
   "author": "zlargon",
