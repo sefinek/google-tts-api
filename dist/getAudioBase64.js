@@ -13,8 +13,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getAllAudioBase64 = exports.getAudioBase64 = void 0;
-const assertInputTypes_1 = __importDefault(require("./assertInputTypes"));
 const axios_1 = __importDefault(require("axios"));
+const assertInputTypes_1 = __importDefault(require("./assertInputTypes"));
 const splitLongText_1 = __importDefault(require("./splitLongText"));
 const getAudioBase64 = (text_1, ...args_1) => __awaiter(void 0, [text_1, ...args_1], void 0, function* (text, { lang = 'en', slow = false, host = 'https://translate.google.com', timeout = 10000 } = {}) {
     (0, assertInputTypes_1.default)(text, lang, slow, host);

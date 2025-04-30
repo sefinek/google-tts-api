@@ -1,5 +1,5 @@
-import assertInputTypes from './assertInputTypes';
 import axios from 'axios';
+import assertInputTypes from './assertInputTypes';
 import splitLongText from './splitLongText';
 
 interface Option {

@@ -4,9 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getAllAudioUrls = exports.getAudioUrl = void 0;
+const node_url_1 = __importDefault(require("node:url"));
 const assertInputTypes_1 = __importDefault(require("./assertInputTypes"));
 const splitLongText_1 = __importDefault(require("./splitLongText"));
-const url_1 = __importDefault(require("url"));
 const getAudioUrl = (text, { lang = 'en', slow = false, host = 'https://translate.google.com' } = {}) => {
     (0, assertInputTypes_1.default)(text, lang, slow, host);
     if (text.length > 200) {
@@ -14,7 +14,7 @@ const getAudioUrl = (text, { lang = 'en', slow = false, host = 'https://translat
     }
     return (host +
         '/translate_tts' +
-        url_1.default.format({
+        node_url_1.default.format({
             query: {
                 ie: 'UTF-8',
                 q: text,

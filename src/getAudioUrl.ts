@@ -1,6 +1,6 @@
+import url from 'node:url';
 import assertInputTypes from './assertInputTypes';
 import splitLongText from './splitLongText';
-import url from 'url';
 
 interface Option {
     lang?: string;
