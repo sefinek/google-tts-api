@@ -33,7 +33,7 @@ export default [
 			'no-shadow': ['error', { allow: ['err', 'resolve', 'reject'] }],
 			'no-trailing-spaces': 'warn',
 			'no-unreachable': 'warn',
-			'no-unused-vars': 'warn',
+			'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
 			'no-use-before-define': ['error', { functions: false, classes: true }],
 			'no-var': 'error',
 			'object-curly-spacing': ['warn', 'always'],
@@ -50,6 +50,6 @@ export default [
 			'wrap-regex': 'warn',
 			'yoda': 'error',
 		},
-		ignores: ['node_modules', '*min.js', '*bundle*', 'build/*', 'dist/*'],
+		ignores: ['node_modules', '**/*.min.js', '**/*bundle*', 'build/**', 'dist/**', 'services/translations/**'],
 	},
 ];
