@@ -35,8 +35,8 @@
   "scripts": {
     "build": "tsc -p .",
     "cover": "npm run build && jest --coverage",
-    "test": "npm run build && jest",
-    "up": "ncu -u && npm install && npm update && npm audit fix"
+    "m": "ncu -u && npm install && npm update",
+    "test": "npm run build && jest"
   },
   "jest": {
     "coverageReporters": [
