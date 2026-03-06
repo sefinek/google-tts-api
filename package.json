@@ -1,6 +1,6 @@
 {
   "name": "@sefinek/google-tts-api",
-  "version": "2.1.12",
+  "version": "2.1.13",
   "description": "Fast Google TTS (Text-To-Speech) for Node.js. For free without any API keys!",
   "keywords": [
     "cloud",
@@ -32,6 +32,12 @@
     "example": "example",
     "test": "test"
   },
+  "files": [
+    "dist",
+    "example",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc -p .",
     "cover": "npm run build && jest --coverage",
