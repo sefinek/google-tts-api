@@ -45,6 +45,9 @@
     "m": "ncu -u && npm install && npm update",
     "test": "npm run build && node --test --test-timeout=60000"
   },
+  "allowScripts": {
+    "unrs-resolver@1.12.2": true
+  },
   "dependencies": {
     "axios": "^1.21.1"
   },
@@ -55,9 +58,6 @@
     "globals": "^17.14.0",
     "is-base64": "^1.1.0",
     "typescript": "^7.0.2"
-  },
-  "allowScripts": {
-    "unrs-resolver@1.12.2": true
   },
   "engines": {
     "node": ">=22.12.0"
