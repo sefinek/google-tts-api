@@ -1,3 +1,5 @@
+const { describe, it } = require('node:test');
+const assert = require('node:assert/strict');
 const splitLongText = require('../dist/splitLongText').default;
 
 const longArticle = `The Industrial Revolution had several roots, one of which was a commercial revolution that, beginning as far back as the sixteenth century, accompanied Europe’s expansion overseas.
@@ -49,18 +51,16 @@ describe('Split long text', () => {
 	it('each the length of short text should shorter than 200', () => {
 		const results = splitLongText(longArticle);
 		for (const str of results) {
-			expect(str.length <= 200).toBe(true);
+			assert.equal(str.length <= 200, true);
 		}
 	});
 
 	it('the single word with 200 length', () => {
-		expect(splitLongText(text200)).toStrictEqual([text200]);
+		assert.deepEqual(splitLongText(text200), [text200]);
 	});
 
 	it('the single word is too long to split into short text', () => {
-		expect(() => splitLongText(text200, { maxLength: 100 })).toThrow(
-			'The word is too long to split into a short text:'
-		);
+		assert.throws(() => splitLongText(text200, { maxLength: 100 }), /The word is too long to split into a short text:/);
 	});
 
 	it('split long chinese text into short text', () => {
@@ -72,13 +72,11 @@ describe('Split long text', () => {
       '是在海洋沉积岩中发现的';
 
 		// no additional split punctuation
-		expect(() => splitLongText(longChineseText)).toThrow(
-			'The word is too long to split into a short text:'
-		);
+		assert.throws(() => splitLongText(longChineseText), /The word is too long to split into a short text:/);
 
 		// add additional split punctuation
 		const results = splitLongText(longChineseText, { splitPunct: '，、。（）' });
-		expect(results.length).toBe(2);
-		expect(results[1]).toBe('虽然多数的化石是在海洋沉积岩中发现的');
+		assert.equal(results.length, 2);
+		assert.equal(results[1], '虽然多数的化石是在海洋沉积岩中发现的');
 	});
 });

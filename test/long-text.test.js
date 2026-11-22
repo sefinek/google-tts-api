@@ -1,7 +1,10 @@
+const { describe, it } = require('node:test');
+const assert = require('node:assert/strict');
 const axios = require('axios');
 const isBase64 = require('is-base64');
 const googleTTS = require('../dist/index');
-jest.setTimeout(60000);
+
+const withMessage = text => err => err.message.includes(text);
 
 describe('Long Text', () => {
 	it('English: 180 characters', async () => {
@@ -15,20 +18,20 @@ describe('Long Text', () => {
 
 		// 2. all audio URLs
 		let resultList = googleTTS.getAllAudioUrls(text);
-		expect(resultList.length).toBe(1);
-		expect(resultList).toStrictEqual([{ shortText: text, url }]);
+		assert.equal(resultList.length, 1);
+		assert.deepEqual(resultList, [{ shortText: text, url }]);
 
 		// 3. audio base64
 		const base64 = await googleTTS.getAudioBase64(text);
-		expect(isBase64(base64)).toBe(true);
+		assert.equal(isBase64(base64), true);
 
 		// 4. all audio base64
 		resultList = await googleTTS.getAllAudioBase64(text);
-		expect(resultList.length).toBe(1);
+		assert.equal(resultList.length, 1);
 
 		const firstResult = resultList[0];
-		expect(firstResult.shortText).toBe(text);
-		expect(isBase64(firstResult.base64)).toBe(true);
+		assert.equal(firstResult.shortText, text);
+		assert.equal(isBase64(firstResult.base64), true);
 	});
 
 	it('English: 200 characters', async () => {
@@ -42,20 +45,20 @@ describe('Long Text', () => {
 
 		// 2. all audio URLs
 		let resultList = googleTTS.getAllAudioUrls(text);
-		expect(resultList.length).toBe(1);
-		expect(resultList).toStrictEqual([{ shortText: text, url }]);
+		assert.equal(resultList.length, 1);
+		assert.deepEqual(resultList, [{ shortText: text, url }]);
 
 		// 3. audio base64
 		const base64 = await googleTTS.getAudioBase64(text);
-		expect(isBase64(base64)).toBe(true);
+		assert.equal(isBase64(base64), true);
 
 		// 4. all audio base64
 		resultList = await googleTTS.getAllAudioBase64(text);
-		expect(resultList.length).toBe(1);
+		assert.equal(resultList.length, 1);
 
 		const firstResult = resultList[0];
-		expect(firstResult.shortText).toBe(text);
-		expect(isBase64(firstResult.base64)).toBe(true);
+		assert.equal(firstResult.shortText, text);
+		assert.equal(isBase64(firstResult.base64), true);
 	});
 
 	it('English: 268 characters', async () => {
@@ -66,25 +69,25 @@ describe('Long Text', () => {
 			'ports showed spectacular growth, particularly in England and France.';
 
 		// 1. audio URL
-		expect(() => {
+		assert.throws(() => {
 			googleTTS.getAudioUrl(text);
-		}).toThrow(errorMessage);
+		}, withMessage(errorMessage));
 
 		// 2. all audio URLs
 		let resultList = googleTTS.getAllAudioUrls(text);
-		expect(resultList.length).toBe(2);
-		expect(resultList.map(item => item.shortText).join('')).toBe(text);
+		assert.equal(resultList.length, 2);
+		assert.equal(resultList.map(item => item.shortText).join(''), text);
 		await Promise.all(resultList.map(({ url }) => axios.get(url)));
 
 		// 3. audio base64
-		await expect(() => googleTTS.getAudioBase64(text)).rejects.toThrow(errorMessage);
+		await assert.rejects(() => googleTTS.getAudioBase64(text), withMessage(errorMessage));
 
 		// 4. all audio base64
 		resultList = await googleTTS.getAllAudioBase64(text);
-		expect(resultList.length).toBe(2);
-		expect(resultList.map(item => item.shortText).join('')).toBe(text);
+		assert.equal(resultList.length, 2);
+		assert.equal(resultList.map(item => item.shortText).join(''), text);
 		for (const { base64 } of resultList) {
-			expect(isBase64(base64)).toBe(true);
+			assert.equal(isBase64(base64), true);
 		}
 	});
 
@@ -102,20 +105,20 @@ describe('Long Text', () => {
 
 		// 2. all audio URLs
 		let resultList = googleTTS.getAllAudioUrls(text, option);
-		expect(resultList.length).toBe(1);
-		expect(resultList).toStrictEqual([{ shortText: text, url }]);
+		assert.equal(resultList.length, 1);
+		assert.deepEqual(resultList, [{ shortText: text, url }]);
 
 		// 3. audio base64
 		const base64 = await googleTTS.getAudioBase64(text, option);
-		expect(isBase64(base64)).toBe(true);
+		assert.equal(isBase64(base64), true);
 
 		// 4. all audio base64
 		resultList = await googleTTS.getAllAudioBase64(text, option);
-		expect(resultList.length).toBe(1);
+		assert.equal(resultList.length, 1);
 
 		const firstResult = resultList[0];
-		expect(firstResult.shortText).toBe(text);
-		expect(isBase64(firstResult.base64)).toBe(true);
+		assert.equal(firstResult.shortText, text);
+		assert.equal(isBase64(firstResult.base64), true);
 	});
 
 	it('Chinese: 200 characters', async () => {
@@ -132,20 +135,20 @@ describe('Long Text', () => {
 
 		// 2. all audio URLs
 		let resultList = googleTTS.getAllAudioUrls(text, option);
-		expect(resultList.length).toBe(1);
-		expect(resultList).toStrictEqual([{ shortText: text, url }]);
+		assert.equal(resultList.length, 1);
+		assert.deepEqual(resultList, [{ shortText: text, url }]);
 
 		// 3. audio base64
 		const base64 = await googleTTS.getAudioBase64(text, option);
-		expect(isBase64(base64)).toBe(true);
+		assert.equal(isBase64(base64), true);
 
 		// 4. all audio base64
 		resultList = await googleTTS.getAllAudioBase64(text, option);
-		expect(resultList.length).toBe(1);
+		assert.equal(resultList.length, 1);
 
 		const firstResult = resultList[0];
-		expect(firstResult.shortText).toBe(text);
-		expect(isBase64(firstResult.base64)).toBe(true);
+		assert.equal(firstResult.shortText, text);
+		assert.equal(isBase64(firstResult.base64), true);
 	});
 
 	it('Chinese: 211 characters', async () => {
@@ -159,25 +162,25 @@ describe('Long Text', () => {
 			'是在海洋沉积岩中发现的';
 
 		// 1. audio URL
-		expect(() => {
+		assert.throws(() => {
 			googleTTS.getAudioUrl(text, option);
-		}).toThrow(errorMessage);
+		}, withMessage(errorMessage));
 
 		// 2. all audio URLs
 		let resultList = googleTTS.getAllAudioUrls(text, option);
-		expect(resultList.length).toBe(2);
-		expect(resultList.map(item => item.shortText).join('')).toBe(text);
+		assert.equal(resultList.length, 2);
+		assert.equal(resultList.map(item => item.shortText).join(''), text);
 		await Promise.all(resultList.map(({ url }) => axios.get(url)));
 
 		// 3. audio base64
-		await expect(() => googleTTS.getAudioBase64(text, option)).rejects.toThrow(errorMessage);
+		await assert.rejects(() => googleTTS.getAudioBase64(text, option), withMessage(errorMessage));
 
 		// 4. all audio base64
 		resultList = await googleTTS.getAllAudioBase64(text, option);
-		expect(resultList.length).toBe(2);
-		expect(resultList.map(item => item.shortText).join('')).toBe(text);
+		assert.equal(resultList.length, 2);
+		assert.equal(resultList.map(item => item.shortText).join(''), text);
 		for (const { base64 } of resultList) {
-			expect(isBase64(base64)).toBe(true);
+			assert.equal(isBase64(base64), true);
 		}
 	});
 });

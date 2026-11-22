@@ -1,4 +1,8 @@
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
 const googleTTS = require('../dist/index');
+
+const withMessage = text => err => err.message.includes(text);
 
 const TestCases = [
 	[null, {}, 'text should be a string'],
@@ -16,14 +20,14 @@ const TestCases = [
 test('test paramater for TTS URL', async () => {
 	for (const [text, option, errorMessage] of TestCases) {
 		// 1. audio url
-		expect(() => {
+		assert.throws(() => {
 			googleTTS.getAudioUrl(text, option);
-		}).toThrow(errorMessage);
+		}, withMessage(errorMessage));
 
 		// 2. all audio url
-		expect(() => {
+		assert.throws(() => {
 			googleTTS.getAllAudioUrls(text, option);
-		}).toThrow(errorMessage);
+		}, withMessage(errorMessage));
 	}
 });
 
@@ -38,10 +42,10 @@ test('test paramater for TTS base64', async () => {
 
 	for (const [text, option, errorMessage] of Base64TestCases) {
 		// 1. audio base64
-		await expect(() => googleTTS.getAudioBase64(text, option)).rejects.toThrow(errorMessage);
+		await assert.rejects(() => googleTTS.getAudioBase64(text, option), withMessage(errorMessage));
 
 		// 2. all audio base64
-		await expect(() => googleTTS.getAllAudioBase64(text, option)).rejects.toThrow(errorMessage);
+		await assert.rejects(() => googleTTS.getAllAudioBase64(text, option), withMessage(errorMessage));
 	}
 });
 
@@ -50,10 +54,10 @@ test('test splitPunct option for all URL and all base64', async () => {
 	const errorMessage = 'splitPunct should be a string';
 
 	// 1. all audio url
-	expect(() => {
+	assert.throws(() => {
 		googleTTS.getAllAudioUrls('test', option);
-	}).toThrow(errorMessage);
+	}, withMessage(errorMessage));
 
 	// 2. all audio base64
-	await expect(() => googleTTS.getAllAudioBase64('test', option)).rejects.toThrow(errorMessage);
+	await assert.rejects(() => googleTTS.getAllAudioBase64('test', option), withMessage(errorMessage));
 });

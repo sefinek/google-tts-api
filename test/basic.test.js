@@ -1,7 +1,8 @@
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
 const axios = require('axios');
 const isBase64 = require('is-base64');
 const googleTTS = require('../dist/index');
-jest.setTimeout(60000);
 
 const TestCases = [
 	['Hello'],
@@ -24,6 +25,6 @@ test('get TTS URL', async () => {
 test('get TTS Base64 Text', async () => {
 	for (const [text, options] of TestCases) {
 		const base64 = await googleTTS.getAudioBase64(text, options);
-		expect(isBase64(base64)).toBe(true);
+		assert.equal(isBase64(base64), true);
 	}
 });
