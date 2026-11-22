@@ -15,7 +15,7 @@
     "text-to-speech-api",
     "texttospeech"
   ],
-  "homepage": "https://github.com/sefinek/google-tts-api#readme",
+  "homepage": "https://github.com/sefinek/google-tts-api",
   "bugs": {
     "url": "https://github.com/sefinek/google-tts-api/issues"
   },
